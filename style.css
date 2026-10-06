@@ -163,3 +163,28 @@ background-position:center;background-size:cover;background-attachment:fixed}
   .footer-credit{grid-column:auto}
   .footer-bottom{flex-direction:column}
 }
+/* Scroll polish + school identity */
+body{overflow-x:hidden}
+.scroll-progress{position:fixed;top:0;left:0;width:100%;height:3px;background:transparent;z-index:1000;pointer-events:none}
+.scroll-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),#e4bb70);box-shadow:0 0 14px rgba(165,20,34,.35);transition:width .08s linear}
+.site-header.scrolled{box-shadow:0 10px 28px rgba(23,32,43,.08);background:rgba(251,250,247,.94)}
+.brand-mark-wrap{position:relative;width:42px;height:42px;display:grid;place-items:center;flex:0 0 42px}
+.school-logo{width:42px;height:42px;object-fit:contain;border-radius:50%;filter:drop-shadow(0 6px 12px rgba(23,32,43,.12))}
+.school-logo[src=""]{display:none}
+.brand-mark-wrap:has(.school-logo[style*="display: none"]) .brand-mark-fallback{display:grid}
+.brand-mark-fallback{display:none;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;font-weight:900;font-size:14px;border:3px solid #e6c67e;box-shadow:0 6px 18px rgba(165,20,34,.24)}
+.hero-content{will-change:transform}
+.scroll-arrow{display:inline-block;animation:scrollBounce 1.55s ease-in-out infinite}
+@keyframes scrollBounce{0%,100%{transform:translateY(0);opacity:.65}50%{transform:translateY(7px);opacity:1}}
+.hero:before{animation:ambientFloat 10s ease-in-out infinite alternate}
+@keyframes ambientFloat{from{transform:scale(1) translate3d(0,0,0)}to{transform:scale(1.05) translate3d(-16px,12px,0)}}
+.timeline{position:relative}
+.timeline:before{content:"";position:absolute;left:132px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--accent) 0%,rgba(165,20,34,.08) 0%);opacity:.55}
+.timeline-item{position:relative;z-index:1}
+.timeline-dot{position:relative;z-index:2}
+.activity-card:nth-child(2){transition-delay:.04s}.activity-card:nth-child(3){transition-delay:.10s}.activity-card:nth-child(4){transition-delay:.16s}
+.reveal{filter:blur(2px)}
+.reveal.is-visible{filter:blur(0)}
+@media(max-width:900px){.timeline:before{left:99px}}
+@media(max-width:640px){.timeline:before{left:93px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{transition:none;transform:none;filter:none}.scroll-arrow,.hero:before{animation:none}}
