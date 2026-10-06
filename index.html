@@ -8,10 +8,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
   <header class="site-header" id="top">
     <nav class="nav container">
       <a class="brand" href="#top" aria-label="Trang chủ THPT Phú Nhuận">
-        <span class="brand-mark">PN</span>
+        <span class="brand-mark-wrap"><img class="school-logo" src="https://thptphunhuan.hcm.edu.vn/favicon.ico" alt="Logo THPT Phú Nhuận"><span class="brand-mark-fallback">PN</span></span>
         <span>
           <strong>THPT PHÚ NHUẬN</strong>
           <small>TP. HỒ CHÍ MINH</small>
@@ -35,9 +36,9 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="hero-overlay"></div>
-      <div class="container hero-content">
+      <div class="container hero-content" data-parallax="0.16">
         <div class="eyebrow">MỘT NÉT ĐẸP CỦA PHÚ NHUẬN</div>
         <h1>Nơi kiến thức<br><em>gặp gỡ thanh xuân.</em></h1>
         <p>
@@ -49,7 +50,7 @@
           <a class="btn btn-ghost" href="#hoat-dong">Xem hoạt động ↓</a>
         </div>
       </div>
-      <div class="scroll-hint">CUỘN ĐỂ KHÁM PHÁ <span>↓</span></div>
+      <div class="scroll-hint">CUỘN ĐỂ KHÁM PHÁ <span class="scroll-arrow">↓</span></div>
     </section>
 
     <section class="stats">
@@ -219,7 +220,7 @@
     <div class="container footer-grid">
       <div>
         <div class="brand footer-brand">
-          <span class="brand-mark">PN</span>
+          <span class="brand-mark-wrap"><img class="school-logo" src="https://thptphunhuan.hcm.edu.vn/favicon.ico" alt="Logo THPT Phú Nhuận"><span class="brand-mark-fallback">PN</span></span>
           <span><strong>THPT PHÚ NHUẬN</strong><small>TP. HỒ CHÍ MINH</small></span>
         </div>
         <p class="footer-note">Website giới thiệu — giao diện học tập/đồ án.</p>
