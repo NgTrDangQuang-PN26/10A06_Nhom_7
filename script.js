@@ -3,7 +3,7 @@ const nav = document.querySelector(".nav");
 const header = document.querySelector(".site-header");
 const navLinks = document.querySelectorAll(".nav-links a");
 const progress = document.querySelector(".scroll-progress span");
-const heroContent = document.querySelector(".hero-content");
+
 const schoolLogo = document.querySelector(".school-logo");
 const logoFallback = document.querySelector(".brand-mark-fallback");
 
@@ -47,11 +47,6 @@ function updateScrollEffects() {
   if (progress) progress.style.width = (ratio * 100).toFixed(2) + "%";
   header?.classList.toggle("scrolled", scrollY > 24);
 
-  if (heroContent && scrollY < window.innerHeight * 1.1) {
-    const offset = Math.min(scrollY * 0.16, 95);
-    heroContent.style.transform = "translate3d(0," + offset + "px,0)";
-    heroContent.style.opacity = String(Math.max(0.5, 1 - scrollY / (window.innerHeight * 1.05)));
-  }
 }
 
 window.addEventListener("scroll", updateScrollEffects, { passive: true });
