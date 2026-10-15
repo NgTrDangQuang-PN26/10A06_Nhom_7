@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 300" role="img" aria-labelledby="title"><title id="title">Biểu trưng Trường THPT Phú Nhuận</title>
+<path d="M120 5 Q174 63 232 76 L228 211 Q216 267 120 294 Q24 267 12 211 L8 76 Q66 63 120 5Z" fill="#fff" stroke="#c9232b" stroke-width="5"/>
+<path d="M39 98 L39 177 L62 177 L62 122 L88 122 L88 98Z" fill="#087bb3"/><path d="M151 98 L151 122 L177 122 L177 177 L200 177 L200 98Z" fill="#087bb3"/>
+<path d="M120 22 C106 44 100 55 107 76 C94 64 91 52 95 40 C81 60 83 80 104 100 L136 100 C158 76 149 52 132 34 C137 55 130 66 124 72 C128 53 125 37 120 22Z" fill="#c9232b"/>
+<path d="M78 111 L162 111 L151 128 L133 128 L128 160 L112 160 L107 128 L89 128Z" fill="#282075"/>
+<path d="M37 144 Q76 164 120 143 Q164 164 203 144 L198 207 Q120 225 42 207Z" fill="#0783ba"/>
+<path d="M60 208 L86 173 Q120 163 154 173 L180 208 L120 222Z" fill="#fff" stroke="#c9232b" stroke-width="3"/>
+<path d="M120 174 L120 216" stroke="#c9232b" stroke-width="2"/>
+<g fill="#282075" font-family="Arial,sans-serif" font-weight="700" font-size="17"><text x="91" y="198" text-anchor="middle">24</text><text x="147" y="198" text-anchor="middle">11</text></g>
+<path d="M43 223 Q78 238 120 228 Q162 238 197 223" fill="none" stroke="#0783ba" stroke-width="7"/>
+<path d="M120 230 L120 260 M120 245 Q92 232 73 240 M120 245 Q148 232 167 240" fill="none" stroke="#0783ba" stroke-width="8" stroke-linecap="round"/>
+<text x="120" y="276" fill="#c9232b" font-family="Arial,sans-serif" font-size="14" font-weight="800" text-anchor="middle">THPT PHÚ NHUẬN</text>
+</svg>
