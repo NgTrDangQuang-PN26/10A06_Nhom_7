@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6ff">
+  <meta name="description" content="Trang giới thiệu bản thân của Nguyễn Trần Đăng Quang, học sinh lớp 10A06 trường THPT Phú Nhuận.">
+  <title>Đăng Quang — Một chút về mình</title>
+  <style>
+    :root{
+      --ink:#20213a;--muted:#74758d;--paper:#fbfaff;--lav:#e8e4ff;--purple:#7667e8;
+      --purple-dark:#5042bf;--coral:#ff927e;--mint:#d9f4e9;--line:#e9e6f2;--white:#fff;
+      --shadow:0 24px 70px rgba(62,48,127,.12);--radius:26px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:92px}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Segoe UI",system-ui,-apple-system,sans-serif;line-height:1.65;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .wrap{width:min(1120px,calc(100% - 44px));margin-inline:auto}
+    .progress{position:fixed;inset:0 0 auto;height:3px;z-index:100;background:transparent;pointer-events:none}
+    .progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--purple),var(--coral))}
+    .topbar{position:sticky;top:0;z-index:50;background:rgba(251,250,255,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(233,230,242,.8)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:-.035em}
+    .brand-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:15px;color:white;background:linear-gradient(145deg,var(--purple),#a29aff);box-shadow:0 8px 22px #7667e833;font-size:15px}
+    .brand-name small{display:block;font-size:10px;letter-spacing:.14em;font-weight:750;color:var(--muted);margin-top:-2px}
+    .links{display:flex;align-items:center;gap:27px}
+    .links a{font-size:13px;font-weight:700;color:#656681;transition:color .2s}
+    .links a:hover{color:var(--purple-dark)}
+    .nav-cta{padding:11px 16px;border-radius:999px;background:var(--ink);color:#fff;font-size:12px;font-weight:800;transition:transform .2s}
+    .nav-cta:hover,.btn:hover{transform:translateY(-2px)}
+    .menu-btn{display:none;border:0;background:var(--lav);width:42px;height:42px;border-radius:14px;color:var(--ink);cursor:pointer}
+    section[id]{scroll-margin-top:100px}
+    .hero{position:relative;padding:88px 0 92px;isolation:isolate;overflow:hidden}
+    .hero:before{content:"";position:absolute;z-index:-2;width:560px;height:560px;border-radius:50%;right:-130px;top:-170px;background:radial-gradient(circle,#e7e1ff 0%,rgba(232,228,255,.28) 54%,transparent 72%)}
+    .hero:after{content:"";position:absolute;z-index:-2;width:340px;height:340px;border-radius:50%;left:-180px;bottom:-170px;background:radial-gradient(circle,#ffe1da 0%,rgba(255,225,218,.3) 60%,transparent 72%)}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:55px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--purple-dark);font-size:11px;letter-spacing:.17em;font-weight:900;text-transform:uppercase}
+    .eyebrow:before{content:"";width:25px;height:2px;background:var(--coral);border-radius:4px}
+    h1,h2,h3,p{margin-top:0}
+    .hero h1{font-size:clamp(46px,6.5vw,80px);line-height:1.02;letter-spacing:-.065em;margin:20px 0 24px;max-width:690px}
+    .hero h1 .name{color:var(--purple);position:relative;white-space:nowrap}
+    .hero h1 .name:after{content:"";position:absolute;left:0;right:2px;height:9px;bottom:-3px;background:var(--coral);opacity:.46;border-radius:99px;z-index:-1;transform:rotate(-1.3deg)}
+    .lead{color:#686985;font-size:17px;max-width:560px;line-height:1.85}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:14px 20px;font-size:13px;font-weight:850;transition:transform .2s,box-shadow .2s}
+    .btn-primary{background:var(--purple);color:#fff;box-shadow:0 12px 25px #7667e833}
+    .btn-secondary{background:#fff;border:1px solid var(--line);color:var(--ink)}
+    .tiny-note{display:flex;align-items:center;gap:9px;margin-top:28px;color:#8989a0;font-size:12px}
+    .tiny-note span{display:inline-grid;place-items:center;width:25px;height:25px;background:var(--mint);border-radius:9px;color:#31866d}
+    .visual{min-height:410px;position:relative;display:grid;place-items:center}
+    .orbit{position:absolute;width:335px;height:335px;border:1px dashed #d2cafa;border-radius:50%;animation:orbit 32s linear infinite}
+    .orbit:before,.orbit:after{content:"";position:absolute;width:15px;height:15px;border-radius:50%;background:var(--coral);box-shadow:0 4px 13px #ff927e55}
+    .orbit:before{left:40px;top:35px}.orbit:after{right:24px;bottom:62px;width:10px;height:10px;background:#91dcc4}
+    .profile-card{position:relative;width:min(330px,90%);padding:27px;border-radius:31px;background:rgba(255,255,255,.83);border:1px solid #fff;box-shadow:var(--shadow);transform:rotate(2deg)}
+    .profile-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+    .status{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border-radius:99px;background:#e7f8ef;color:#347c62;font-size:10px;font-weight:850}
+    .status:before{content:"";width:6px;height:6px;background:#48bd8b;border-radius:50%}
+    .sparkle{font-size:25px;color:#f0ad63}
+    .avatar{display:grid;place-items:center;width:110px;height:110px;margin:0 auto 20px;border-radius:35px;background:linear-gradient(135deg,#d8d2ff,#fbd7d0);font-size:42px;font-weight:900;letter-spacing:-.07em;color:#5447b7;position:relative}
+    .avatar:after{content:"✦";position:absolute;right:-9px;top:-7px;display:grid;place-items:center;width:31px;height:31px;background:#fff3d9;border-radius:12px;color:#e6a545;font-size:17px;box-shadow:0 7px 18px #ad874b22}
+    .profile-card h2{text-align:center;font-size:25px;letter-spacing:-.04em;margin:0 0 3px}
+    .profile-card .student{text-align:center;color:var(--muted);font-size:12px;margin:0}
+    .card-rule{height:1px;background:var(--line);margin:22px 0}
+    .mini-info{display:flex;justify-content:space-between;align-items:center;gap:15px;font-size:12px;margin:12px 0}
+    .mini-info span{color:var(--muted)}
+    .mini-info strong{font-size:12px}
+    .floating{position:absolute;z-index:2;padding:13px 16px;background:#fff;box-shadow:0 14px 35px #322d6520;border:1px solid #fff;border-radius:18px;font-size:12px;font-weight:800;animation:float 5s ease-in-out infinite}
+    .float-a{left:-4px;top:52px;transform:rotate(-5deg)}.float-b{right:-4px;bottom:54px;animation-delay:-2.3s;transform:rotate(4deg)}
+    .floating small{display:block;font-size:10px;color:var(--muted);font-weight:650}
+    .float-emoji{font-size:19px;margin-right:7px;vertical-align:middle}
+    .strip{padding:0 0 35px}
+    .strip-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .pill{padding:16px 18px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.66);display:flex;align-items:center;gap:12px;min-width:0}
+    .pill-icon{flex:0 0 38px;height:38px;display:grid;place-items:center;border-radius:13px;background:var(--lav);font-size:18px}
+    .pill:nth-child(2) .pill-icon{background:#ffe9e3}.pill:nth-child(3) .pill-icon{background:#dcf6eb}.pill:nth-child(4) .pill-icon{background:#fff0d0}
+    .pill span{display:block;font-size:10px;color:var(--muted);margin-bottom:1px}
+    .pill strong{display:block;font-size:12px;line-height:1.4;overflow-wrap:anywhere}
+    .section{padding:95px 0}
+    .section-soft{background:#f4f1ff}
+    .section-heading{max-width:690px;margin-bottom:42px}
+    .section-heading h2{font-size:clamp(36px,4.7vw,56px);letter-spacing:-.055em;line-height:1.1;margin:16px 0}
+    .section-heading h2 em{color:var(--purple);font-style:normal}
+    .section-heading p{color:var(--muted);max-width:590px}
+    .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px}
+    .note-card{border-radius:var(--radius);padding:30px;background:var(--ink);color:#fff;position:relative;overflow:hidden;min-height:300px;display:flex;flex-direction:column;justify-content:space-between}
+    .note-card:after{content:"✦";position:absolute;right:-16px;top:-43px;font-size:180px;color:#ffffff0d;transform:rotate(15deg)}
+    .note-card .quote{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#c9c2ff;font-weight:850}
+    .note-card blockquote{position:relative;z-index:1;font-size:clamp(24px,3vw,35px);line-height:1.25;font-weight:800;letter-spacing:-.04em;margin:24px 0}
+    .note-card small{color:#b3b2ca;font-size:11px}
+    .about-copy{border-radius:var(--radius);padding:32px;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}
+    .about-copy h3{font-size:24px;letter-spacing:-.04em;margin-bottom:13px}
+    .about-copy p{font-size:14px;color:var(--muted);line-height:1.9;margin-bottom:13px}
+    .about-copy p:last-child{margin-bottom:0}
+    .detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .detail-card{padding:25px;border-radius:22px;background:#fff;border:1px solid var(--line);transition:transform .25s,box-shadow .25s}
+    .detail-card:hover{transform:translateY(-5px);box-shadow:0 18px 35px #40376e12}
+    .detail-card .icon{display:grid;place-items:center;width:45px;height:45px;border-radius:15px;background:var(--lav);font-size:21px;margin-bottom:25px}
+    .detail-card:nth-child(2) .icon{background:#ffe7e1}.detail-card:nth-child(3) .icon{background:#dcf6eb}.detail-card:nth-child(4) .icon{background:#fff0d0}.detail-card:nth-child(5) .icon{background:#e5efff}.detail-card:nth-child(6) .icon{background:#ffe8f3}
+    .detail-card span{font-size:11px;display:block;color:var(--muted);margin-bottom:5px}
+    .detail-card strong{font-size:16px;display:block;letter-spacing:-.02em}
+    .detail-card p{font-size:12px;color:var(--muted);margin:8px 0 0}
+    .journey-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .journey-card{display:flex;gap:19px;padding:27px;background:#fff;border:1px solid var(--line);border-radius:23px}
+    .journey-card .j-icon{flex:0 0 52px;height:52px;display:grid;place-items:center;border-radius:17px;background:var(--lav);font-size:24px}
+    .journey-card:nth-child(2) .j-icon{background:#ffe7e1}
+    .journey-card h3{font-size:19px;letter-spacing:-.03em;margin:2px 0 7px}
+    .journey-card p{margin:0;color:var(--muted);font-size:13px}
+    .hobby-panel{border-radius:30px;padding:42px;background:linear-gradient(120deg,#e8e4ff,#fff0e9);display:flex;align-items:center;justify-content:space-between;gap:30px;overflow:hidden;position:relative}
+    .hobby-panel h2{font-size:clamp(30px,4vw,44px);letter-spacing:-.05em;line-height:1.1;margin:14px 0}
+    .hobby-panel p{max-width:570px;color:#6c6b86;font-size:14px;margin:0}
+    .hobby-sticker{flex:0 0 115px;height:115px;display:grid;place-items:center;background:#ffffffaa;border:1px solid #ffffff;border-radius:34px;font-size:47px;transform:rotate(8deg);box-shadow:0 20px 40px #6e61af19}
+    .footer{padding:30px 0 40px}
+    .footer-inner{border-top:1px solid var(--line);padding-top:27px;display:flex;align-items:center;justify-content:space-between;gap:20px;color:var(--muted);font-size:12px}
+    .footer-inner strong{color:var(--ink)}
+    .back-top{font-weight:800;color:var(--purple-dark)}
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    @keyframes float{0%,100%{translate:0 0}50%{translate:0 -9px}}
+    @keyframes orbit{to{transform:rotate(360deg)}}
+    @media(max-width:900px){
+      .hero-grid{grid-template-columns:1fr  .8fr;gap:25px}.visual{min-height:370px}.orbit{width:285px;height:285px}
+      .hero h1{font-size:clamp(44px,6.8vw,66px)}.links{gap:16px}.links a{font-size:12px}.nav-cta{display:none}
+      .strip-inner{grid-template-columns:repeat(2,1fr)}.detail-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:650px){
+      .wrap{width:min(100% - 30px,1120px)}.nav{min-height:68px}.menu-btn{display:block}
+      .links{display:none;position:absolute;top:68px;left:0;right:0;padding:15px 22px 20px;background:rgba(251,250,255,.98);border-bottom:1px solid var(--line);box-shadow:0 20px 28px #20213a0b}
+      .links.open{display:flex;flex-direction:column;align-items:stretch;gap:0}
+      .links a{padding:12px 5px;font-size:14px}.hero{padding:60px 0 45px}.hero-grid{grid-template-columns:1fr;gap:15px}
+      .hero h1{font-size:clamp(45px,12vw,65px);margin:17px 0}.lead{font-size:15px}.visual{min-height:345px;margin-top:5px}
+      .profile-card{width:min(310px,82%);padding:23px}.orbit{width:270px;height:270px}.float-a{left:0;top:43px}.float-b{right:0;bottom:42px}
+      .strip{padding-bottom:20px}.strip-inner{gap:9px}.pill{padding:12px;gap:8px}.pill-icon{flex-basis:32px;height:32px;border-radius:10px;font-size:16px}.pill strong{font-size:11px}
+      .section{padding:70px 0}.section-heading{margin-bottom:28px}.about-grid,.journey-grid{grid-template-columns:1fr}
+      .note-card{min-height:260px}.about-copy{padding:26px}.detail-grid{gap:10px}.detail-card{padding:17px;border-radius:18px}.detail-card .icon{width:39px;height:39px;margin-bottom:18px}
+      .detail-card strong{font-size:14px}.detail-card p{font-size:11px}.journey-card{padding:21px;gap:14px}.hobby-panel{padding:28px;align-items:flex-start}
+      .hobby-sticker{flex-basis:65px;height:65px;border-radius:22px;font-size:29px}.hobby-panel p{font-size:13px}
+      .footer-inner{align-items:flex-start;flex-direction:column}
+    }
+    @media(max-width:390px){.detail-grid{grid-template-columns:1fr 1fr}.pill{align-items:flex-start;flex-direction:column}.float-a{left:-6px}.float-b{right:-6px}.hobby-panel{gap:10px}.hobby-sticker{flex-basis:52px;height:52px;font-size:24px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <header class="topbar">
+    <nav class="nav wrap" aria-label="Điều hướng chính">
+      <a class="brand" href="#home" aria-label="Về đầu trang">
+        <span class="brand-icon">DQ</span>
+        <span class="brand-name">ĐĂNG QUANG<small>PERSONAL SPACE</small></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Mở menu" aria-expanded="false">☰</button>
+      <div class="links" id="navLinks">
+        <a href="#about">Về mình</a>
+        <a href="#profile">Thông tin</a>
+        <a href="#journey">Hành trình</a>
+        <a href="#interests">Sở thích</a>
+      </div>
+      <a class="nav-cta" href="#profile">Khám phá thêm ↘</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Rất vui vì bạn ghé thăm!</div>
+          <h1>Xin chào,<br>mình là <span class="name">Đăng Quang.</span></h1>
+          <p class="lead">Đây là một góc nhỏ trên internet để chia sẻ đôi điều về mình, hành trình học tập và những điều làm nên phiên bản riêng của mình.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#about">Tìm hiểu về mình <span>↘</span></a>
+            <a class="btn btn-secondary" href="#profile">Thông tin cá nhân <span>✦</span></a>
+          </div>
+          <div class="tiny-note"><span>✿</span> Một chút hiện tại, thật nhiều điều đang chờ phía trước.</div>
+        </div>
+
+        <div class="visual" aria-label="Thẻ giới thiệu Đăng Quang">
+          <div class="orbit" aria-hidden="true"></div>
+          <div class="floating float-a"><span class="float-emoji">🎒</span>Học sinh 10A06<small>THPT Phú Nhuận</small></div>
+          <div class="profile-card">
+            <div class="profile-top"><span class="status">Đang viết câu chuyện của mình</span><span class="sparkle">✦</span></div>
+            <div class="avatar" aria-hidden="true">DQ</div>
+            <h2>Nguyễn Trần Đăng Quang</h2>
+            <p class="student">Học sinh · TP. Hồ Chí Minh</p>
+            <div class="card-rule"></div>
+            <div class="mini-info"><span>Ngày sinh</span><strong>22.09.2011</strong></div>
+            <div class="mini-info"><span>Cung hoàng đạo</span><strong>Xử Nữ ♍</strong></div>
+            <div class="mini-info"><span>Quê quán</span><strong>Ninh Bình 🇻🇳</strong></div>
+          </div>
+          <div class="floating float-b"><span class="float-emoji">🌱</span>Luôn phát triển<small>Từng bước một, mỗi ngày.</small></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="strip">
+      <div class="wrap strip-inner">
+        <div class="pill reveal"><span class="pill-icon">🎂</span><div><span>Ngày sinh</span><strong>22 tháng 09, 2011</strong></div></div>
+        <div class="pill reveal"><span class="pill-icon">♍</span><div><span>Cung hoàng đạo</span><strong>Xử Nữ</strong></div></div>
+        <div class="pill reveal"><span class="pill-icon">🏫</span><div><span>Lớp hiện tại</span><strong>10A06</strong></div></div>
+        <div class="pill reveal"><span class="pill-icon">📍</span><div><span>Đang sống tại</span><strong>TP. Hồ Chí Minh</strong></div></div>
+      </div>
+    </div>
+
+    <section class="section section-soft" id="about">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div class="eyebrow">01 — Đôi điều về mình</div>
+          <h2>Mỗi người đều có<br>một câu chuyện <em>riêng.</em></h2>
+          <p>Còn đây là vài dòng mở đầu cho câu chuyện của mình.</p>
+        </div>
+        <div class="about-grid">
+          <article class="note-card reveal">
+            <span class="quote">Một lời nhắc nhỏ ✦</span>
+            <blockquote>“Không cần hoàn hảo ngay hôm nay. Chỉ cần không ngừng tiến về phía trước.”</blockquote>
+            <small>Một tinh thần để mang theo trên hành trình trưởng thành.</small>
+          </article>
+          <article class="about-copy reveal">
+            <h3>Chào bạn, mình là Quang!</h3>
+            <p>Mình là Nguyễn Trần Đăng Quang, hiện đang học lớp 10A06 tại trường THPT Phú Nhuận, TP. Hồ Chí Minh. Đây là nơi mình lưu lại những thông tin cơ bản và chia sẻ một chút về bản thân.</p>
+            <p>Mình có quê ở Ninh Bình và hiện đang sống, học tập tại TP. Hồ Chí Minh. Mình tin rằng những năm tháng học trò là khoảng thời gian đáng nhớ để học hỏi, trải nghiệm và dần khám phá điều mình thật sự yêu thích.</p>
+            <p>Trang này sẽ còn được cập nhật thêm khi mình có những câu chuyện, sở thích và mục tiêu mới muốn chia sẻ.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="profile">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div class="eyebrow">02 — Hồ sơ của mình</div>
+          <h2>Một vài thông tin<br><em>cơ bản.</em></h2>
+          <p>Những mảnh ghép nhỏ giúp bạn hiểu thêm về mình.</p>
+        </div>
+        <div class="detail-grid">
+          <article class="detail-card reveal"><span class="icon">👤</span><span>Họ và tên</span><strong>Nguyễn Trần Đăng Quang</strong><p>Tên mình muốn bạn nhớ.</p></article>
+          <article class="detail-card reveal"><span class="icon">🎂</span><span>Ngày sinh</span><strong>22/09/2011</strong><p>Một ngày mùa thu.</p></article>
+          <article class="detail-card reveal"><span class="icon">♍</span><span>Cung hoàng đạo</span><strong>Xử Nữ</strong><p>23/08 – 22/09 theo cách chia phổ biến.</p></article>
+          <article class="detail-card reveal"><span class="icon">📚</span><span>Lớp học</span><strong>10A06</strong><p>Những năm tháng THPT.</p></article>
+          <article class="detail-card reveal"><span class="icon">🏫</span><span>Trường học</span><strong>THPT Phú Nhuận</strong><p>TP. Hồ Chí Minh.</p></article>
+          <article class="detail-card reveal"><span class="icon">🏡</span><span>Quê quán</span><strong>Ninh Bình</strong><p>Nơi gắn với cội nguồn của mình.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="journey">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div class="eyebrow">03 — Nơi mình thuộc về</div>
+          <h2>Hai nơi, hai sắc màu<br><em>thân thương.</em></h2>
+        </div>
+        <div class="journey-grid">
+          <article class="journey-card reveal">
+            <span class="j-icon">🌆</span>
+            <div><h3>TP. Hồ Chí Minh</h3><p>Nơi mình đang sống và học tập, mỗi ngày có thêm trải nghiệm mới trong hành trình tuổi học trò.</p></div>
+          </article>
+          <article class="journey-card reveal">
+            <span class="j-icon">🌿</span>
+            <div><h3>Ninh Bình</h3><p>Quê hương của mình — một phần thân thuộc trong câu chuyện và nguồn cội của bản thân.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="interests">
+      <div class="wrap">
+        <div class="hobby-panel reveal">
+          <div>
+            <div class="eyebrow">04 — Những điều mình yêu thích</div>
+            <h2>Còn nhiều điều thú vị<br>để kể về mình!</h2>
+            <p>Phần này sẽ được hoàn thiện khi mình bổ sung sở thích, môn học yêu thích, tài năng, mục tiêu hoặc ước mơ trong tương lai. Mỗi chi tiết nhỏ sẽ giúp trang web mang cá tính của mình hơn.</p>
+          </div>
+          <div class="hobby-sticker" aria-hidden="true">✨</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>Được tạo với ✦ dành riêng cho <strong>Đăng Quang</strong>.</div>
+      <div>Một trang nhỏ, một câu chuyện đang lớn lên.</div>
+      <a class="back-top" href="#home">Lên đầu trang ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    const progressBar = document.getElementById('progressBar');
+
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+      menuBtn.textContent = isOpen ? '✕' : '☰';
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.textContent = '☰';
+      });
+    });
+
+    function updateProgress() {
+      const page = document.documentElement;
+      const maxScroll = page.scrollHeight - window.innerHeight;
+      const amount = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
+      progressBar.style.width = amount.toFixed(2) + '%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+
+    const revealItems = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -24px 0px' });
+      revealItems.forEach((item, index) => {
+        item.style.transitionDelay = Math.min((index % 4) * 70, 210) + 'ms';
+        revealObserver.observe(item);
+      });
+    } else {
+      revealItems.forEach(item => item.classList.add('visible'));
+    }
+  </script>
+</body>
+</html>
